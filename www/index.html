@@ -142,6 +142,7 @@ pre code {
     padding: 15px 15px 15px 250px;
 }
 </style>
+<link rel="icon" href="omnifeather16.png" type="image/png" sizes="16x16"/><link rel="icon" href="omnifeather32.png" type="image/png" sizes="32x32"/><link rel="apple-touch-icon" href="omnifeather60.png"><link rel="apple-touch-icon" sizes="76x76" href="omnifeather76.png"><link rel="apple-touch-icon" sizes="120x120" href="omnifeather120.png"><link rel="apple-touch-icon" sizes="152x152" href="omnifeather152.png">
 </head>
 <body data-spy="scroll" data-target=".scrollspy">
 <div id="sidebar-wrapper">
@@ -165,14 +166,6 @@ pre code {
         
         <li>
             <a href="#request-v1-address-addr-details">/v1/address/addr/details/</a>
-        </li>
-        
-        <li>
-            <a href="#request-v1-armory-getunsigned">/v1/armory/getunsigned</a>
-        </li>
-        
-        <li>
-            <a href="#request-v1-armory-getrawtransaction">/v1/armory/getrawtransaction</a>
         </li>
         
         <li>
@@ -271,7 +264,7 @@ This api and the information within is provided &ldquo;as-is&rdquo; and without 
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="request-v2-address-addr-example-curl">
-                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "addr=1FoWyxwPXuj4C6abqwhjDWdz6D4PZgYRjA&addr=1KYiKJEfdJtap9QX2v9BXJMpz2SfU4pgZw" "https://api.omniwallet.org/v2/address/addr/"</code></pre>
+                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "addr=6kZPvf2s2AeLMnwXUUcHA1ZgCPVtDwsNtN&addr=6xBDCUuzDyxhUeoKaznCPXdr93Qd1RHVpC" "https://api.omniwallet.org/v2/address/addr/"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-v2-address-addr-example-http">
                                 <pre><code class="hljs http">POST /v2/address/addr/ HTTP/1.1
@@ -279,7 +272,7 @@ Host: api.omniwallet.org
 Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 
-addr=1FoWyxwPXuj4C6abqwhjDWdz6D4PZgYRjA&addr=1KYiKJEfdJtap9QX2v9BXJMpz2SfU4pgZw</code></pre>
+addr=6kZPvf2s2AeLMnwXUUcHA1ZgCPVtDwsNtN&addr=6xBDCUuzDyxhUeoKaznCPXdr93Qd1RHVpC</code></pre>
                             </div>
                         </div>
                     </div>
@@ -313,7 +306,7 @@ addr=1FoWyxwPXuj4C6abqwhjDWdz6D4PZgYRjA&addr=1KYiKJEfdJtap9QX2v9BXJMpz2SfU4pgZw<
                                     
                                     <tr><td class="response-text-sample" colspan="2">
                                         <pre><code>{
-    "1FoWyxwPXuj4C6abqwhjDWdz6D4PZgYRjA": {
+    "6kZPvf2s2AeLMnwXUUcHA1ZgCPVtDwsNtN": {
         "balance": [
             {
                 "pendingpos": "231154059052026",
@@ -328,7 +321,7 @@ addr=1FoWyxwPXuj4C6abqwhjDWdz6D4PZgYRjA&addr=1KYiKJEfdJtap9QX2v9BXJMpz2SfU4pgZw<
             {
                 "pendingpos": "0",
                 "divisible": true,
-                "symbol": "BTC",
+                "symbol": "FTC",
                 "value": "860484222",
                 "pendingneg": "0",
                 "error": false,
@@ -336,7 +329,7 @@ addr=1FoWyxwPXuj4C6abqwhjDWdz6D4PZgYRjA&addr=1KYiKJEfdJtap9QX2v9BXJMpz2SfU4pgZw<
             }
         ]
     },
-    "1KYiKJEfdJtap9QX2v9BXJMpz2SfU4pgZw": {
+    "6xBDCUuzDyxhUeoKaznCPXdr93Qd1RHVpC": {
         "balance": [
             {
                 "pendingpos": "0",
@@ -351,7 +344,7 @@ addr=1FoWyxwPXuj4C6abqwhjDWdz6D4PZgYRjA&addr=1KYiKJEfdJtap9QX2v9BXJMpz2SfU4pgZw<
             {
                 "pendingpos": "0",
                 "divisible": true,
-                "symbol": "BTC",
+                "symbol": "FTC",
                 "value": "8916129408",
                 "pendingneg": "0",
                 "error": false,
@@ -391,15 +384,15 @@ addr=1FoWyxwPXuj4C6abqwhjDWdz6D4PZgYRjA&addr=1KYiKJEfdJtap9QX2v9BXJMpz2SfU4pgZw<
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="request-v1-address-addr-example-curl">
-                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "addr=1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P" "https://api.omniexplorer.info/v1/address/addr/"</code></pre>
+                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "addr=34sGcLqfNK83RHdNPiVjkbxRHgNPSD7kzT" "https://api.omnifeather.com/v1/address/addr/"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-v1-address-addr-example-http">
                                 <pre><code class="hljs http">POST /v1/address/addr/ HTTP/1.1
-Host: api.omniexplorer.info
+Host: api.omnifeather.com
 Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 
-addr=1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P</code></pre>
+addr=34sGcLqfNK83RHdNPiVjkbxRHgNPSD7kzT</code></pre>
                             </div>
                         </div>
                     </div>
@@ -433,33 +426,24 @@ addr=1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P</code></pre>
                                         <pre><code>{
     "balance": [
         {
-            "divisible": true,
+            "divisible": false,
             "frozen": "0",
-            "id": "1",
+            "id": "2147483652",
             "pendingneg": "0",
             "pendingpos": "0",
             "reserved": "0",
-            "symbol": "OMNI",
-            "value": "3054147959984"
-        },
-        {
-            "divisible": true,
-            "frozen": "0",
-            "id": "2",
-            "pendingneg": "0",
-            "pendingpos": "0",
-            "reserved": "0",
-            "symbol": "T-OMNI",
-            "value": "0"
+            "symbol": "SP2147483652",
+            "value": "71"
         },
         {
             "divisible": true,
             "error": false,
-            "id": 0,
+            "errormsg": null,
+            "id": "0",
             "pendingneg": "0",
             "pendingpos": "0",
-            "symbol": "BTC",
-            "value": "214236735"
+            "symbol": "FTC",
+            "value": "24584783678"
         }
     ]
 }
@@ -495,15 +479,15 @@ addr=1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P</code></pre>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="request-v1-address-addr-details-example-curl">
-                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "addr=1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P" "https://api.omniexplorer.info/v1/address/addr/details/"</code></pre>
+                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "addr=34sGcLqfNK83RHdNPiVjkbxRHgNPSD7kzT" "https://api.omnifeather.com/v1/address/addr/details/"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-v1-address-addr-details-example-http">
                                 <pre><code class="hljs http">POST /v1/address/addr/details/ HTTP/1.1
-Host: api.omniexplorer.info
+Host: api.omnifeather.com
 Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 
-addr=1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P</code></pre>
+addr=34sGcLqfNK83RHdNPiVjkbxRHgNPSD7kzT</code></pre>
                             </div>
                         </div>
                     </div>
@@ -535,56 +519,49 @@ addr=1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P</code></pre>
                                     
                                     <tr><td class="response-text-sample" colspan="2">
                                         <pre><code>{
-    "address": "1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P",
+    "address": "34sGcLqfNK83RHdNPiVjkbxRHgNPSD7kzT",
     "balance": [
         {
-            "divisible": true,
+            "divisible": false,
             "frozen": "0",
-            "id": "1",
+            "id": "2147483652",
             "pendingneg": "0",
             "pendingpos": "0",
             "reserved": "0",
-            "symbol": "OMNI",
-            "value": "3054147959984"
-        },
-        {
-            "divisible": true,
-            "frozen": "0",
-            "id": "2",
-            "pendingneg": "0",
-            "pendingpos": "0",
-            "reserved": "0",
-            "symbol": "T-OMNI",
-            "value": "0"
+            "symbol": "SP2147483652",
+            "value": "71"
         },
         {
             "divisible": true,
             "error": false,
-            "id": 0,
+            "errormsg": null,
+            "id": "0",
             "pendingneg": "0",
             "pendingpos": "0",
-            "symbol": "BTC",
-            "value": "214236735"
+            "symbol": "FTC",
+            "value": "24584783678"
         }
     ],
     "pages": 3,
     "transactions": [
         {
-            "amount": "0.00000100",
-            "block": 342733,
-            "blockhash": "000000000000000014a6858e7da93606ffe624331a2f295732c8c9499ffa1025",
-            "blocktime": 1423503818,
-            "confirmations": 176418,
-            "divisible": true,
-            "fee": "0.00001000",
+            "amount": "21",
+            "block": 3641273,
+            "blockhash": "99f488d267421ba2791237f32519c3107077661076932de9f72473d8db772c13",
+            "blocktime": 1619378074,
+            "confirmations": 10486,
+            "divisible": false,
+            "fee": "0.00394472",
+            "flags": null,
             "ismine": false,
-            "positioninblock": 1569,
-            "propertyid": 1,
-            "propertyname": "Omni",
-            "sendingaddress": "1F9jCeixNbK6GEkdQFq1ejkbJjAGwVVVqG",
-            "txid": "318fb016144f3dadb16acf39cd7e00089b808418f1c4b343926af55882824966",
-            "type": "Send To Owners",
-            "type_int": 3,
+            "positioninblock": 1,
+            "propertyid": 10,
+            "propertyname": "Beer Tokens",
+            "referenceaddress": "34sGcLqfNK83RHdNPiVjkbxRHgNPSD7kzT",
+            "sendingaddress": "34sGcLqfNK83RHdNPiVjkbxRHgNPSD7kzT",
+            "txid": "b6adfc65f6887bea6274e69933545a06dc6688e34d9d4e36ff3875e0578b9a16",
+            "type": "DEx Accept Offer",
+            "type_int": 22,
             "valid": true,
             "version": 0
         },
@@ -609,190 +586,12 @@ addr=1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P</code></pre>
                 
                 <div class="request">
 
-                    <h3 id="request-v1-armory-getunsigned">
-                        /v1/armory/getunsigned
-                        <a href="#request-v1-armory-getunsigned"><i class="glyphicon glyphicon-link"></i></a>
-                    </h3>
-
-                    <div><p>Returns the Armory encoded version of an unsigned transaction for use with Armory offline transactions.
-Data:
-unsigned_hex : raw bitcoin hex formatted tx to be converted
-pubkey : pubkey of the sending address</p>
-</div>
-
-                    <div>
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#request-v1-armory-getunsigned-example-curl" data-toggle="tab">Curl</a></li>
-                            <li role="presentation"><a href="#request-v1-armory-getunsigned-example-http" data-toggle="tab">HTTP</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="request-v1-armory-getunsigned-example-curl">
-                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "unsigned_hex=01000000011c2d89d15d4853194e0e617e5d6d6d151752b09f72bf62a34453643270ebc763000000001976a914946cb2e08075bcbaf157e47bcb67eb2b2339d24288acffffffff01d8d60000000000001976a914946cb2e08075bcbaf157e47bcb67eb2b2339d24288ac00000000&pubkey=04ad90e5b6bc86b3ec7fac2c5fbda7423fc8ef0d58df594c773fa05e2c281b2bfe877677c668bd13603944e34f4818ee03cadd81a88542b8b4d5431264180e2c28" "https://api.omniexplorer.info/v1/armory/getunsigned"</code></pre>
-                            </div>
-                            <div class="tab-pane" id="request-v1-armory-getunsigned-example-http">
-                                <pre><code class="hljs http">POST /v1/armory/getunsigned HTTP/1.1
-Host: api.omniexplorer.info
-Content-Type: application/x-www-form-urlencoded
-Content-Type: application/x-www-form-urlencoded
-
-unsigned_hex=01000000011c2d89d15d4853194e0e617e5d6d6d151752b09f72bf62a34453643270ebc763000000001976a914946cb2e08075bcbaf157e47bcb67eb2b2339d24288acffffffff01d8d60000000000001976a914946cb2e08075bcbaf157e47bcb67eb2b2339d24288ac00000000&pubkey=04ad90e5b6bc86b3ec7fac2c5fbda7423fc8ef0d58df594c773fa05e2c281b2bfe877677c668bd13603944e34f4818ee03cadd81a88542b8b4d5431264180e2c28</code></pre>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    <div>
-                        <ul class="nav nav-tabs" role="tablist">
-                            
-                            <li role="presentation" class="active">
-                                <a href="#request-v1-armory-getunsigned-responses-efdde8c4-5488-41ef-84b0-276e9aefb802" data-toggle="tab">
-                                    
-                                    Response
-                                    
-                                </a>
-                            </li>
-                            
-                        </ul>
-                        <div class="tab-content">
-                            
-                            <div class="tab-pane active" id="request-v1-armory-getunsigned-responses-efdde8c4-5488-41ef-84b0-276e9aefb802">
-                                <table class="table table-bordered">
-                                    <tr><th style="width: 20%;">Status</th><td>200 </td></tr>
-                                    
-                                    <tr><th style="width: 20%;">Content-Encoding</th><td>gzip</td></tr>
-                                    
-                                    <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
-                                    
-                                    
-                                    
-                                    <tr><td class="response-text-sample" colspan="2">
-                                        <pre><code>{
-    "armoryUnsigned": "=====TXSIGCOLLECT-7fK9x5wF======================================\nAQAAAPm+tNkAAAAAAf2gAQEAAAD5vrTZHC2J0V1IUxlODmF+XW1tFRdSsJ9yv2Kj\nRFNkMnDrx2MAAAAA/SUBAQAAAAHb6cvxUOY3xjmumbvja4ws2Y91+lIUyjV3kswG\nZmxHNAAAAABqRzBEAiAWH+zK7+MqKy/RpARlwAxlkGmB2oI5jwXCzwXlrgoDdwIg\nRIt5APjkheiGF64yCgGDXHpLdlB7cYRgvuEePdRvee0BIQIx3eVJDpRTFPeTFz1z\nD/sd7M8z0/5dZUFpNFHpPFrinv////8EYOoAAAAAAAAZdqkUlGyy4IB1vLrxV+R7\ny2frKyM50kKIrJB3dAEAAAAAGXapFJHmmj4F756OJPTktKHCmlUL83kWiKxg6gAA\nAAAAABl2qRSCgUFaaIQzk5laBF7zFYAlb2gEyYisYOoAAAAAAAAZdqkUgQAAAAAA\nAAACAAAAAAX14QAAAACIrAAAAAAAAAD/////AUEErZDltryGs+x/rCxfvadCP8jv\nDVjfWUx3P6BeLCgbK/6HdnfGaL0TYDlE409IGO4Dyt2BqIVCuLTVQxJkGA4sKAAA\nATQBAAAA+b602Rl2qRSUbLLggHW8uvFX5HvLZ+srIznSQois2NYAAAAAAAAAAARO\nT05FAAAAAAAAAA==\n================================================================"
-}
-</code></pre>
-                                    </td></tr>
-                                    
-                                    
-                                </table>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    
-
-                    <hr>
-                </div>
-                
-                
-                <div class="request">
-
-                    <h3 id="request-v1-armory-getrawtransaction">
-                        /v1/armory/getrawtransaction
-                        <a href="#request-v1-armory-getrawtransaction"><i class="glyphicon glyphicon-link"></i></a>
-                    </h3>
-
-                    <div><p>Decodes and returns the raw hex and signed status from an armory transaction.
-Data:
-armory_tx : armory transaction in text format</p>
-</div>
-
-                    <div>
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#request-v1-armory-getrawtransaction-example-curl" data-toggle="tab">Curl</a></li>
-                            <li role="presentation"><a href="#request-v1-armory-getrawtransaction-example-http" data-toggle="tab">HTTP</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="request-v1-armory-getrawtransaction-example-curl">
-                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "armory_tx======TXSIGCOLLECT-7fK9x5wF======================================
-AQAAAPm+tNkAAAAAAf2gAQEAAAD5vrTZHC2J0V1IUxlODmF+XW1tFRdSsJ9yv2Kj
-RFNkMnDrx2MAAAAA/SUBAQAAAAHb6cvxUOY3xjmumbvja4ws2Y91+lIUyjV3kswG
-ZmxHNAAAAABqRzBEAiAWH+zK7+MqKy/RpARlwAxlkGmB2oI5jwXCzwXlrgoDdwIg
-RIt5APjkheiGF64yCgGDXHpLdlB7cYRgvuEePdRvee0BIQIx3eVJDpRTFPeTFz1z
-D/sd7M8z0/5dZUFpNFHpPFrinv////8EYOoAAAAAAAAZdqkUlGyy4IB1vLrxV+R7
-y2frKyM50kKIrJB3dAEAAAAAGXapFJHmmj4F756OJPTktKHCmlUL83kWiKxg6gAA
-AAAAABl2qRSCgUFaaIQzk5laBF7zFYAlb2gEyYisYOoAAAAAAAAZdqkUgQAAAAAA
-AAACAAAAAAX14QAAAACIrAAAAAAAAAD/////AUEErZDltryGs+x/rCxfvadCP8jv
-DVjfWUx3P6BeLCgbK/6HdnfGaL0TYDlE409IGO4Dyt2BqIVCuLTVQxJkGA4sKAAA
-ATQBAAAA+b602Rl2qRSUbLLggHW8uvFX5HvLZ+srIznSQois2NYAAAAAAAAAAARO
-T05FAAAAAAAAAA==
-================================================================" "https://api.omniexplorer.info/v1/armory/getrawtransaction"</code></pre>
-                            </div>
-                            <div class="tab-pane" id="request-v1-armory-getrawtransaction-example-http">
-                                <pre><code class="hljs http">POST /v1/armory/getrawtransaction HTTP/1.1
-Host: api.omniexplorer.info
-Content-Type: application/x-www-form-urlencoded
-Content-Type: application/x-www-form-urlencoded
-
-armory_tx======TXSIGCOLLECT-7fK9x5wF======================================
-AQAAAPm+tNkAAAAAAf2gAQEAAAD5vrTZHC2J0V1IUxlODmF+XW1tFRdSsJ9yv2Kj
-RFNkMnDrx2MAAAAA/SUBAQAAAAHb6cvxUOY3xjmumbvja4ws2Y91+lIUyjV3kswG
-ZmxHNAAAAABqRzBEAiAWH+zK7+MqKy/RpARlwAxlkGmB2oI5jwXCzwXlrgoDdwIg
-RIt5APjkheiGF64yCgGDXHpLdlB7cYRgvuEePdRvee0BIQIx3eVJDpRTFPeTFz1z
-D/sd7M8z0/5dZUFpNFHpPFrinv////8EYOoAAAAAAAAZdqkUlGyy4IB1vLrxV+R7
-y2frKyM50kKIrJB3dAEAAAAAGXapFJHmmj4F756OJPTktKHCmlUL83kWiKxg6gAA
-AAAAABl2qRSCgUFaaIQzk5laBF7zFYAlb2gEyYisYOoAAAAAAAAZdqkUgQAAAAAA
-AAACAAAAAAX14QAAAACIrAAAAAAAAAD/////AUEErZDltryGs+x/rCxfvadCP8jv
-DVjfWUx3P6BeLCgbK/6HdnfGaL0TYDlE409IGO4Dyt2BqIVCuLTVQxJkGA4sKAAA
-ATQBAAAA+b602Rl2qRSUbLLggHW8uvFX5HvLZ+srIznSQois2NYAAAAAAAAAAARO
-T05FAAAAAAAAAA==
-================================================================</code></pre>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    <div>
-                        <ul class="nav nav-tabs" role="tablist">
-                            
-                            <li role="presentation" class="active">
-                                <a href="#request-v1-armory-getrawtransaction-responses-4cd4be00-961c-4083-a028-59dea8b36aac" data-toggle="tab">
-                                    
-                                    Response
-                                    
-                                </a>
-                            </li>
-                            
-                        </ul>
-                        <div class="tab-content">
-                            
-                            <div class="tab-pane active" id="request-v1-armory-getrawtransaction-responses-4cd4be00-961c-4083-a028-59dea8b36aac">
-                                <table class="table table-bordered">
-                                    <tr><th style="width: 20%;">Status</th><td>200 </td></tr>
-                                    
-                                    <tr><th style="width: 20%;">Content-Encoding</th><td>gzip</td></tr>
-                                    
-                                    <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
-                                    
-                                    
-                                    
-                                    <tr><td class="response-text-sample" colspan="2">
-                                        <pre><code>{
-    "rawTransaction": "01000000011c2d89d15d4853194e0e617e5d6d6d151752b09f72bf62a34453643270ebc7630000000000ffffffff01d8d60000000000001976a914946cb2e08075bcbaf157e47bcb67eb2b2339d24288ac00000000",
-    "signed": false
-}
-</code></pre>
-                                    </td></tr>
-                                    
-                                    
-                                </table>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    
-
-                    <hr>
-                </div>
-                
-                
-                <div class="request">
-
                     <h3 id="request-v1-decode">
                         /v1/decode/
                         <a href="#request-v1-decode"><i class="glyphicon glyphicon-link"></i></a>
                     </h3>
 
-                    <div><p>Decodes raw hex returning Omni and Bitcoin transaction information</p>
+                    <div><p>Decodes raw hex returning Omni and Feathercoin transaction information</p>
 </div>
 
                     <div>
@@ -802,15 +601,15 @@ T05FAAAAAAAAAA==
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="request-v1-decode-example-curl">
-                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "hex=0100000001b8442ba55406897a5c5751d3b4bb841d1686dbf43de16e1f4d581a2274eecd8e000000006b483045022100ac16e6e938d1353440b88d41e7de9e7ef3d232fb8db04ed639885596d0f8df260220297fc6fb9d39d9042b859b07dd78b634827f8d541213c16c0d68b40b60739372012103124d5b2ba19187be886e4bfa4c5c66cbdac7c6249825ff4fa3c7e05479a08823feffffff030000000000000000166a146f6d6e69000000000000001f000000003b02338075910700000000001976a914025d87dd0602bd86308b354e038f82ba1e9fe94688ac22020000000000001976a91488d924f51033b74a895863a5fb57fd545529df7d88acf9eb0700" "https://api.omniexplorer.info/v1/decode/"</code></pre>
+                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "02000000000101dba31a8ad20168df805cd9177e0f05b3e81b12bc44dc594b4be46ad01983003703000000171600149bc50cf78ea3a1211295f903ea101ea5f225914cfeffffff034b9e861c0000000017a914e7f8790d510345c8f5e5733e051432b22542e956870000000000000000166a146f6d6e6900000000000000060000000005f5e10022020000000000001976a9144cfdf57ef8bcdaea9549ea18640085ec94d9b03088ac02473044022030addb67cc52142ec7e9bf5003aa2a546979ec3caea704ce050b15587aebbb460220154343c9513f2e6fb1736c42961ed55f3f3bcf27bba6516cb0173daf3f0b0386012103edd48602aba91e3b762f5d07955fe329bfb20a75df03ff304728589beb4991c1c1843600" "https://api.omnifeather.com/v1/decode/"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-v1-decode-example-http">
                                 <pre><code class="hljs http">POST /v1/decode/ HTTP/1.1
-Host: api.omniexplorer.info
+Host: api.omnifeather.com
 Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 
-hex=0100000001b8442ba55406897a5c5751d3b4bb841d1686dbf43de16e1f4d581a2274eecd8e000000006b483045022100ac16e6e938d1353440b88d41e7de9e7ef3d232fb8db04ed639885596d0f8df260220297fc6fb9d39d9042b859b07dd78b634827f8d541213c16c0d68b40b60739372012103124d5b2ba19187be886e4bfa4c5c66cbdac7c6249825ff4fa3c7e05479a08823feffffff030000000000000000166a146f6d6e69000000000000001f000000003b02338075910700000000001976a914025d87dd0602bd86308b354e038f82ba1e9fe94688ac22020000000000001976a91488d924f51033b74a895863a5fb57fd545529df7d88acf9eb0700</code></pre>
+02000000000101dba31a8ad20168df805cd9177e0f05b3e81b12bc44dc594b4be46ad01983003703000000171600149bc50cf78ea3a1211295f903ea101ea5f225914cfeffffff034b9e861c0000000017a914e7f8790d510345c8f5e5733e051432b22542e956870000000000000000166a146f6d6e6900000000000000060000000005f5e10022020000000000001976a9144cfdf57ef8bcdaea9549ea18640085ec94d9b03088ac02473044022030addb67cc52142ec7e9bf5003aa2a546979ec3caea704ce050b15587aebbb460220154343c9513f2e6fb1736c42961ed55f3f3bcf27bba6516cb0173daf3f0b0386012103edd48602aba91e3b762f5d07955fe329bfb20a75df03ff304728589beb4991c1c1843600</code></pre>
                             </div>
                         </div>
                     </div>
@@ -841,82 +640,88 @@ hex=0100000001b8442ba55406897a5c5751d3b4bb841d1686dbf43de16e1f4d581a2274eecd8e00
                                     
                                     
                                     <tr><td class="response-text-sample" colspan="2">
-                                        <pre><code>{
-    "BTC": {
-        "hash": "5451c8e67d7ab3f947064337e8cf87c416f1fb163630913dcf307d4ca5d5ccaa",
-        "locktime": 519161,
-        "size": 257,
-        "txid": "5451c8e67d7ab3f947064337e8cf87c416f1fb163630913dcf307d4ca5d5ccaa",
-        "version": 1,
+                                        <pre><code>
+{
+    "FTC": {
+        "hash": "d4cc70a4fe4bd1e13b3fcd05db44ac000f31f1da0b31e0afa8f46cd3ed5218a5",
+        "locktime": 3572929,
+        "size": 280,
+        "txid": "14b440f5c146d179939119eb6ce64593efddf9074f3bb455e53d6406377ccff0",
+        "version": 2,
         "vin": [
             {
                 "scriptSig": {
-                    "asm": "3045022100ac16e6e938d1353440b88d41e7de9e7ef3d232fb8db04ed639885596d0f8df260220297fc6fb9d39d9042b859b07dd78b634827f8d541213c16c0d68b40b60739372[ALL] 03124d5b2ba19187be886e4bfa4c5c66cbdac7c6249825ff4fa3c7e05479a08823",
-                    "hex": "483045022100ac16e6e938d1353440b88d41e7de9e7ef3d232fb8db04ed639885596d0f8df260220297fc6fb9d39d9042b859b07dd78b634827f8d541213c16c0d68b40b60739372012103124d5b2ba19187be886e4bfa4c5c66cbdac7c6249825ff4fa3c7e05479a08823"
+                    "asm": "00149bc50cf78ea3a1211295f903ea101ea5f225914c",
+                    "hex": "1600149bc50cf78ea3a1211295f903ea101ea5f225914c"
                 },
                 "sequence": 4294967294,
-                "txid": "8ecdee74221a584d1f6ee13df4db86161d84bbb4d351575c7a890654a52b44b8",
-                "vout": 0
+                "txid": "37008319d06ae44b4b59dc44bc121be8b3050f7e17d95c80df6801d28a1aa3db",
+                "txinwitness": [
+                    "3044022030addb67cc52142ec7e9bf5003aa2a546979ec3caea704ce050b15587aebbb460220154343c9513f2e6fb1736c42961ed55f3f3bcf27bba6516cb0173daf3f0b038601",
+                    "03edd48602aba91e3b762f5d07955fe329bfb20a75df03ff304728589beb4991c1"
+                ],
+                "vout": 3
             }
         ],
         "vout": [
             {
                 "n": 0,
                 "scriptPubKey": {
-                    "asm": "OP_RETURN 6f6d6e69000000000000001f000000003b023380",
-                    "hex": "6a146f6d6e69000000000000001f000000003b023380",
-                    "type": "nulldata"
+                    "addresses": [
+                        "3NqZg44HNtmmcDggd8wyVxmUZo2Vv9Fqvk"
+                    ],
+                    "asm": "OP_HASH160 e7f8790d510345c8f5e5733e051432b22542e956 OP_EQUAL",
+                    "hex": "a914e7f8790d510345c8f5e5733e051432b22542e95687",
+                    "reqSigs": 1,
+                    "type": "scripthash"
                 },
-                "value": 0.0
+                "value": 4.78584395
             },
             {
                 "n": 1,
                 "scriptPubKey": {
-                    "addresses": [
-                        "1DWQ1gZ8VhL1fUCABqKbXtUZv63roGvXf"
-                    ],
-                    "asm": "OP_DUP OP_HASH160 025d87dd0602bd86308b354e038f82ba1e9fe946 OP_EQUALVERIFY OP_CHECKSIG",
-                    "hex": "76a914025d87dd0602bd86308b354e038f82ba1e9fe94688ac",
-                    "reqSigs": 1,
-                    "type": "pubkeyhash"
+                    "asm": "OP_RETURN 6f6d6e6900000000000000060000000005f5e100",
+                    "hex": "6a146f6d6e6900000000000000060000000005f5e100",
+                    "type": "nulldata"
                 },
-                "value": 0.00495989
+                "value": 0
             },
             {
                 "n": 2,
                 "scriptPubKey": {
                     "addresses": [
-                        "1DUb2YYbQA1jjaNYzVXLZ7ZioEhLXtbUru"
+                        "6kkYNUiQFDbYoj7Pr8wc9oqJ1TjDNtxy77"
                     ],
-                    "asm": "OP_DUP OP_HASH160 88d924f51033b74a895863a5fb57fd545529df7d OP_EQUALVERIFY OP_CHECKSIG",
-                    "hex": "76a91488d924f51033b74a895863a5fb57fd545529df7d88ac",
+                    "asm": "OP_DUP OP_HASH160 4cfdf57ef8bcdaea9549ea18640085ec94d9b030 OP_EQUALVERIFY OP_CHECKSIG",
+                    "hex": "76a9144cfdf57ef8bcdaea9549ea18640085ec94d9b03088ac",
                     "reqSigs": 1,
                     "type": "pubkeyhash"
                 },
-                "value": 5.46e-06
+                "value": 0.00000546
             }
         ],
-        "vsize": 257
+        "vsize": 199,
+        "weight": 793
     },
     "OMNI": {
-        "amount": "9.90000000",
+        "amount": "1.00000000",
         "confirmations": 0,
         "divisible": true,
-        "fee": "0.00003465",
+        "fee": "0.00398000",
         "ismine": false,
-        "propertyid": 31,
-        "referenceaddress": "1DUb2YYbQA1jjaNYzVXLZ7ZioEhLXtbUru",
-        "sendingaddress": "1DWQ1gZ8VhL1fUCABqKbXtUZv63roGvXf",
-        "txid": "5451c8e67d7ab3f947064337e8cf87c416f1fb163630913dcf307d4ca5d5ccaa",
+        "propertyid": 6,
+        "referenceaddress": "6kkYNUiQFDbYoj7Pr8wc9oqJ1TjDNtxy77",
+        "sendingaddress": "3NqZg44HNtmmcDggd8wyVxmUZo2Vv9Fqvk",
+        "txid": "14b440f5c146d179939119eb6ce64593efddf9074f3bb455e53d6406377ccff0",
         "type": "Simple Send",
         "type_int": 0,
         "version": 0
     },
-    "Reference": "1DUb2YYbQA1jjaNYzVXLZ7ZioEhLXtbUru",
-    "Sender": "1DWQ1gZ8VhL1fUCABqKbXtUZv63roGvXf",
+    "Reference": "6kkYNUiQFDbYoj7Pr8wc9oqJ1TjDNtxy77",
+    "Sender": "3NqZg44HNtmmcDggd8wyVxmUZo2Vv9Fqvk",
     "error": "None",
     "inputs": {
-        "1DWQ1gZ8VhL1fUCABqKbXtUZv63roGvXf": 500000
+        "3NqZg44HNtmmcDggd8wyVxmUZo2Vv9Fqvk": 478982941
     }
 }
 </code></pre>
@@ -953,11 +758,11 @@ ecosystem : 1 for main / production ecosystem or 2 for test/development ecosyste
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="request-v1-omnidex-designatingcurrencies-example-curl">
-                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "ecosystem=1" "https://api.omniexplorer.info/v1/omnidex/designatingcurrencies"</code></pre>
+                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "ecosystem=1" "https://api.omnifeather.com/v1/omnidex/designatingcurrencies"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-v1-omnidex-designatingcurrencies-example-http">
                                 <pre><code class="hljs http">POST /v1/omnidex/designatingcurrencies HTTP/1.1
-Host: api.omniexplorer.info
+Host: api.omnifeather.com
 Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 
@@ -995,19 +800,9 @@ ecosystem=1</code></pre>
                                         <pre><code>{
     "currencies": [
         {
-            "displayname": "Omni #1",
-            "propertyid": 1,
-            "propertyname": "Omni"
-        },
-        {
-            "displayname": "MaidSafeCoin #3",
+            "displayname": "Feather #1",
             "propertyid": 3,
-            "propertyname": "MaidSafeCoin"
-        },
-        {
-            "displayname": "TetherUS #31",
-            "propertyid": 31,
-            "propertyname": "TetherUS"
+            "propertyname": "Feather"
         },
         {
             "additional records": "..."
@@ -1053,11 +848,11 @@ Close Crowdsale earlier tx</p>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="request-v1-properties-gethistory-property-id-example-curl">
-                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "page=0" "https://api.omniexplorer.info/v1/properties/gethistory/3"</code></pre>
+                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "page=0" "https://api.omnifeather.com/v1/properties/gethistory/10"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-v1-properties-gethistory-property-id-example-http">
-                                <pre><code class="hljs http">POST /v1/properties/gethistory/3 HTTP/1.1
-Host: api.omniexplorer.info
+                                <pre><code class="hljs http">POST /v1/properties/gethistory/10 HTTP/1.1
+Host: api.omnifeather.com
 Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 
@@ -1092,69 +887,39 @@ page=0</code></pre>
                                     
                                     
                                     <tr><td class="response-text-sample" colspan="2">
-                                        <pre><code>{
-    "pages": 19,
-    "total": 193,
+                                        <pre><code>
+{
+    "pages": 0,
+    "total": 1,
     "transactions": [
         {
-            "amount": "0",
-            "block": 297115,
-            "blockhash": "00000000000000004c93a71e1b0dd876c07cbc5ebd385ff8e5ba8379ffa1e377",
-            "blocktime": 1398154020,
-            "category": "Crowdsale",
-            "confirmations": 213140,
-            "data": "SAFE Network Crowdsale (MSAFE)",
-            "deadline": 1400749200,
+            "amount": "100000",
+            "block": 3588991,
+            "blockhash": "e92dc699faf3db8e3a94dfca49ebbd8fe7eaeef2f6e671ddebc11de16b7365ac",
+            "blocktime": 1616101791,
+            "category": "",
+            "confirmations": 62800,
+            "data": "I O U Beer Tokens",
             "divisible": false,
-            "earlybonus": 10,
             "ecosystem": "main",
-            "fee": "0.00010001",
+            "fee": "0.00726050",
             "ismine": false,
-            "percenttoissuer": 0,
-            "positioninblock": 215,
-            "propertyid": 3,
-            "propertyiddesired": 1,
-            "propertyname": "MaidSafeCoin",
+            "positioninblock": 1,
+            "propertyid": 10,
+            "propertyname": "Beer Tokens",
             "propertytype": "indivisible",
-            "sendingaddress": "1ARjWDkZ7kT9fwjPrjcQyvbXDkEySzKHwu",
-            "subcategory": "MaidSafe",
-            "tokensperunit": "0.00003400",
-            "txid": "86f214055a7f4f5057922fd1647e00ef31ab0a3ff15217f8b90e295f051873a7",
-            "type": "Create Property - Variable",
-            "type_int": 51,
-            "url": "www.buysafecoins.com",
+            "sendingaddress": "3GbFbGNvZSPMVKNranhRQEaRvWQLgpcfcQ",
+            "subcategory": "",
+            "txid": "a019d1d1bc8701d72a3b08467eb949a1f4b1998e67f8d4fd6b39af032dcb931a",
+            "type": "Create Property - Fixed",
+            "type_int": 50,
+            "url": "http://reganhimself.com/beertokens",
             "valid": true,
             "version": 0
-        },
-        {
-            "amount": "100.00000000",
-            "block": 297117,
-            "blockhash": "00000000000000002cf2f281f4a69c6757f9e468fd30b50c5c85433a7b17b1c5",
-            "blocktime": 1398155998,
-            "confirmations": 213138,
-            "divisible": true,
-            "fee": "0.00050000",
-            "ismine": false,
-            "issuertokens": "0",
-            "positioninblock": 83,
-            "propertyid": 1,
-            "purchasedpropertydivisible": false,
-            "purchasedpropertyid": 3,
-            "purchasedpropertyname": "MaidSafeCoin",
-            "purchasedtokens": "485781",
-            "referenceaddress": "1ARjWDkZ7kT9fwjPrjcQyvbXDkEySzKHwu",
-            "sendingaddress": "1LEVELTb6dkZmsUXgQE8nqc8naAVotX86D",
-            "txid": "4ec15360a03d23c069c2fd4a035cfee28af5ddfdd5a6839934dd2629129d477e",
-            "type": "Crowdsale Purchase",
-            "type_int": 0,
-            "valid": true,
-            "version": 0
-        },
-        {
-            "additional records": "..."
         }
     ]
-}</code></pre>
+}
+</code></pre>
                                     </td></tr>
                                     
                                     
@@ -1186,15 +951,15 @@ page=0</code></pre>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="request-v1-properties-listbyowner-example-curl">
-                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "addresses=1ARjWDkZ7kT9fwjPrjcQyvbXDkEySzKHwu" "https://api.omniexplorer.info/v1/properties/listbyowner"</code></pre>
+                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "addresses=3GbFbGNvZSPMVKNranhRQEaRvWQLgpcfcQ" "https://api.omnifeather.com/v1/properties/listbyowner"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-v1-properties-listbyowner-example-http">
                                 <pre><code class="hljs http">POST /v1/properties/listbyowner HTTP/1.1
-Host: api.omniexplorer.info
+Host: api.omnifeather.com
 Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 
-addresses=1ARjWDkZ7kT9fwjPrjcQyvbXDkEySzKHwu</code></pre>
+addresses=3GbFbGNvZSPMVKNranhRQEaRvWQLgpcfcQ</code></pre>
                             </div>
                         </div>
                     </div>
@@ -1225,50 +990,38 @@ addresses=1ARjWDkZ7kT9fwjPrjcQyvbXDkEySzKHwu</code></pre>
                                     
                                     
                                     <tr><td class="response-text-sample" colspan="2">
-                                        <pre><code>{
+                                        <pre><code>
+{
     "properties": [
         {
-            "active": false,
-            "addedissuertokens": "0",
-            "amount": "0",
-            "amountraised": "93249.21601551",
-            "block": 297115,
-            "blockhash": "00000000000000004c93a71e1b0dd876c07cbc5ebd385ff8e5ba8379ffa1e377",
-            "blocktime": 1398154020,
-            "category": "Crowdsale",
-            "closedearly": true,
-            "closetx": "b8864525a2eef4f76a58f33a4af50dc24461445e1a420e21bcc99a1901740e79",
-            "confirmations": 213140,
-            "creationtxid": "86f214055a7f4f5057922fd1647e00ef31ab0a3ff15217f8b90e295f051873a7",
-            "data": "SAFE Network Crowdsale (MSAFE)",
-            "deadline": 1400749200,
+            "amount": "100000",
+            "block": 3588991,
+            "blockhash": "e92dc699faf3db8e3a94dfca49ebbd8fe7eaeef2f6e671ddebc11de16b7365ac",
+            "blocktime": 1616101791,
+            "category": "",
+            "confirmations": 62648,
+            "creationtxid": "a019d1d1bc8701d72a3b08467eb949a1f4b1998e67f8d4fd6b39af032dcb931a",
+            "data": "I O U Beer Tokens",
             "divisible": false,
-            "earlybonus": 10,
             "ecosystem": "main",
-            "endedtime": 1398173740,
-            "fee": "0.00010001",
-            "fixedissuance": false,
+            "fee": "0.00726050",
+            "fixedissuance": true,
             "ismine": false,
-            "issuer": "1ARjWDkZ7kT9fwjPrjcQyvbXDkEySzKHwu",
+            "issuer": "3GbFbGNvZSPMVKNranhRQEaRvWQLgpcfcQ",
             "managedissuance": false,
-            "maxtokens": false,
-            "name": "MaidSafeCoin",
-            "percenttoissuer": 0,
-            "positioninblock": 215,
-            "propertyid": 3,
-            "propertyiddesired": 1,
-            "propertyname": "MaidSafeCoin",
+            "name": "Beer Tokens",
+            "non-fungibletoken": false,
+            "positioninblock": 1,
+            "propertyid": 10,
+            "propertyname": "Beer Tokens",
             "propertytype": "indivisible",
-            "sendingaddress": "1ARjWDkZ7kT9fwjPrjcQyvbXDkEySzKHwu",
-            "starttime": 1398154020,
-            "subcategory": "MaidSafe",
-            "tokensissued": "452552412",
-            "tokensperunit": "3400",
-            "totaltokens": "452552412",
-            "txid": "86f214055a7f4f5057922fd1647e00ef31ab0a3ff15217f8b90e295f051873a7",
-            "type": "Create Property - Variable",
-            "type_int": 51,
-            "url": "www.buysafecoins.com",
+            "sendingaddress": "3GbFbGNvZSPMVKNranhRQEaRvWQLgpcfcQ",
+            "subcategory": "",
+            "totaltokens": "100000",
+            "txid": "a019d1d1bc8701d72a3b08467eb949a1f4b1998e67f8d4fd6b39af032dcb931a",
+            "type": "Create Property - Fixed",
+            "type_int": 50,
+            "url": "http://reganhimself.com/beertokens",
             "valid": true,
             "version": 0
         }
@@ -1309,11 +1062,11 @@ ecosystem : 1 for production/main ecosystem. 2 for test/dev ecosystem</p>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="request-v1-properties-listactivecrowdsales-example-curl">
-                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "ecosystem=1" "https://api.omniexplorer.info/v1/properties/listactivecrowdsales"</code></pre>
+                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "ecosystem=1" "https://api.omnifeather.com/v1/properties/listactivecrowdsales"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-v1-properties-listactivecrowdsales-example-http">
                                 <pre><code class="hljs http">POST /v1/properties/listactivecrowdsales HTTP/1.1
-Host: api.omniexplorer.info
+Host: api.omnifeather.com
 Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 
@@ -1360,7 +1113,7 @@ ecosystem=1</code></pre>
             "divisible": true,
             "earlybonus": 0,
             "fixedissuance": false,
-            "issuer": "1PRozi3UhpXtC4kZtPD1nfCFXJkXrV27Wp",
+            "issuer": "6kZPvf2s2AeLMnwXUUcHA1ZgCPVtDwsNtN",
             "name": "ProzCoin",
             "percenttoissuer": 100,
             "propertyid": 28,
@@ -1412,11 +1165,11 @@ ecosystem : 1 for production/main ecosystem. 2 for test/dev ecosystem</p>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="request-v1-properties-listbyecosystem-example-curl">
-                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "ecosystem=1" "https://api.omniexplorer.info/v1/properties/listbyecosystem"</code></pre>
+                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "ecosystem=1" "https://api.omnifeather.com/v1/properties/listbyecosystem"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-v1-properties-listbyecosystem-example-http">
                                 <pre><code class="hljs http">POST /v1/properties/listbyecosystem HTTP/1.1
-Host: api.omniexplorer.info
+Host: api.omnifeather.com
 Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 
@@ -1454,19 +1207,19 @@ ecosystem=1</code></pre>
                                         <pre><code>{
     "properties": [
         {
-            "blocktime": 1377994675,
-            "category": "N/A",
-            "creationtxid": "0000000000000000000000000000000000000000000000000000000000000000",
-            "data": "Omni serve as the binding between Bitcoin, smart properties and contracts created on the Omni Layer.",
-            "divisible": true,
-            "fixedissuance": false,
-            "issuer": "1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P",
+            "category": "",
+            "creationtxid": "a019d1d1bc8701d72a3b08467eb949a1f4b1998e67f8d4fd6b39af032dcb931a",
+            "data": "I O U Beer Tokens",
+            "divisible": false,
+            "fixedissuance": true,
+            "issuer": "3GbFbGNvZSPMVKNranhRQEaRvWQLgpcfcQ",
             "managedissuance": false,
-            "name": "Omni",
-            "propertyid": 1,
-            "subcategory": "N/A",
-            "totaltokens": "617211.68177584",
-            "url": "http://www.omnilayer.org"
+            "name": "Beer Tokens",
+            "non-fungibletoken": false,
+            "propertyid": 10,
+            "subcategory": "",
+            "totaltokens": "100000",
+            "url": "http://reganhimself.com/beertokens"
         },
         {
             "additional records": "..."
@@ -1505,11 +1258,11 @@ ecosystem=1</code></pre>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="request-v1-properties-list-example-curl">
-                                <pre><code class="hljs curl">curl -X GET -H "Content-Type: application/x-www-form-urlencoded" "https://api.omniexplorer.info/v1/properties/list"</code></pre>
+                                <pre><code class="hljs curl">curl -X GET -H "Content-Type: application/x-www-form-urlencoded" "https://api.omnifeather.com/v1/properties/list"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-v1-properties-list-example-http">
                                 <pre><code class="hljs http">GET /v1/properties/list HTTP/1.1
-Host: api.omniexplorer.info
+Host: api.omnifeather.com
 Content-Type: application/x-www-form-urlencoded</code></pre>
                             </div>
                         </div>
@@ -1542,36 +1295,36 @@ Content-Type: application/x-www-form-urlencoded</code></pre>
                                     
                                     <tr><td class="response-text-sample" colspan="2">
                                         <pre><code>{
-    "properties": [
+   "properties": [
         {
-            "blocktime": 1377994675,
-            "category": "N/A",
-            "creationtxid": "0000000000000000000000000000000000000000000000000000000000000000",
-            "data": "Omni serve as the binding between Bitcoin, smart properties and contracts created on the Omni Layer.",
-            "divisible": true,
-            "fixedissuance": false,
-            "issuer": "1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P",
+            "category": "People",
+            "creationtxid": "f9feff6fbeeb99a9a1b4389b10a5e6f6cb7ba22d9fe9d7e9744026e742bd49e3",
+            "data": "Alexander Tolstoy",
+            "divisible": false,
+            "fixedissuance": true,
+            "issuer": "3J6SW6bhvrsM6EcYvLE7zu83dWWCGvivC7",
             "managedissuance": false,
-            "name": "Omni",
-            "propertyid": 1,
-            "subcategory": "N/A",
-            "totaltokens": "617211.68177584",
-            "url": "http://www.omnilayer.org"
+            "name": "ALEX.TOLSTOY",
+            "non-fungibletoken": false,
+            "propertyid": 5,
+            "subcategory": "",
+            "totaltokens": "6",
+            "url": ""
         },
         {
-            "blocktime": 1377994675,
-            "category": "N/A",
-            "creationtxid": "0000000000000000000000000000000000000000000000000000000000000000",
-            "data": "Test Omni serve as the binding between Bitcoin, smart properties and contracts created on the Omni Layer.",
-            "divisible": true,
-            "fixedissuance": false,
-            "issuer": "1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P",
+            "category": "",
+            "creationtxid": "a019d1d1bc8701d72a3b08467eb949a1f4b1998e67f8d4fd6b39af032dcb931a",
+            "data": "I O U Beer Tokens",
+            "divisible": false,
+            "fixedissuance": true,
+            "issuer": "3GbFbGNvZSPMVKNranhRQEaRvWQLgpcfcQ",
             "managedissuance": false,
-            "name": "Test Omni",
-            "propertyid": 2,
-            "subcategory": "N/A",
-            "totaltokens": "563162.35759628",
-            "url": "http://www.omnilayer.org"
+            "name": "Beer Tokens",
+            "non-fungibletoken": false,
+            "propertyid": 10,
+            "subcategory": "",
+            "totaltokens": "100000",
+            "url": "http://reganhimself.com/beertokens"
         },
         {
             "additional records": "..."
@@ -1612,15 +1365,15 @@ query : text string of either Transaction ID, Address, or property id to search 
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="request-v1-search-example-curl">
-                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "query=3" "https://api.omniexplorer.info/v1/search"</code></pre>
+                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "query=Beer" "https://api.omnifeather.com/v1/search"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-v1-search-example-http">
                                 <pre><code class="hljs http">POST /v1/search HTTP/1.1
-Host: api.omniexplorer.info
+Host: api.omnifeather.com
 Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 
-query=3</code></pre>
+query=Beer</code></pre>
                             </div>
                         </div>
                     </div>
@@ -1656,9 +1409,9 @@ query=3</code></pre>
         "address": {},
         "asset": [
             [
-                3,
-                "MaidSafeCoin",
-                "1ARjWDkZ7kT9fwjPrjcQyvbXDkEySzKHwu"
+                10,
+                "Beer Tokens",
+                "3GbFbGNvZSPMVKNranhRQEaRvWQLgpcfcQ"
             ]
         ],
         "tx": {}
@@ -1701,15 +1454,15 @@ page : cycle through available response pages (10 txs per page)</p>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="request-v1-transaction-address-example-curl">
-                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "addr=1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P&page=0" "https://api.omniexplorer.info/v1/transaction/address"</code></pre>
+                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "addr=34sGcLqfNK83RHdNPiVjkbxRHgNPSD7kzT&page=0" "https://api.omnifeather.com/v1/transaction/address"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-v1-transaction-address-example-http">
                                 <pre><code class="hljs http">POST /v1/transaction/address HTTP/1.1
-Host: api.omniexplorer.info
+Host: api.omnifeather.com
 Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 
-addr=1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P&page=0</code></pre>
+addr=34sGcLqfNK83RHdNPiVjkbxRHgNPSD7kzT&page=0</code></pre>
                             </div>
                         </div>
                     </div>
@@ -1741,25 +1494,26 @@ addr=1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P&page=0</code></pre>
                                     
                                     <tr><td class="response-text-sample" colspan="2">
                                         <pre><code>{
-    "address": "1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P",
+    "address": "34sGcLqfNK83RHdNPiVjkbxRHgNPSD7kzT",
     "pages": 3,
     "transactions": [
         {
-            "amount": "0.00000100",
-            "block": 342733,
-            "blockhash": "000000000000000014a6858e7da93606ffe624331a2f295732c8c9499ffa1025",
-            "blocktime": 1423503818,
-            "confirmations": 176424,
-            "divisible": true,
-            "fee": "0.00001000",
+            "amount": 1,
+            "block": 3648817,
+            "blockhash": "ace10495c28c237b07b0d46bb3a76e13746796079a4bbf70f7926181e4cfbed9",
+            "blocktime": 1619850612,
+            "confirmations": 2985,
+            "fee": "0.00410000",
             "ismine": false,
-            "positioninblock": 1569,
-            "propertyid": 1,
-            "propertyname": "Omni",
-            "sendingaddress": "1F9jCeixNbK6GEkdQFq1ejkbJjAGwVVVqG",
-            "txid": "318fb016144f3dadb16acf39cd7e00089b808418f1c4b343926af55882824966",
-            "type": "Send To Owners",
-            "type_int": 3,
+            "positioninblock": 8,
+            "propertyid": 15,
+            "referenceaddress": "3GbFbGNvZSPMVKNranhRQEaRvWQLgpcfcQ",
+            "sendingaddress": "34sGcLqfNK83RHdNPiVjkbxRHgNPSD7kzT",
+            "tokenend": 10,
+            "tokenstart": 10,
+            "txid": "f40981336f0f65443e0d8015f99034df4583b874a921629e4d743a7d403422e3",
+            "type": "Unique Send",
+            "type_int": 5,
             "valid": true,
             "version": 0
         },
@@ -1801,15 +1555,15 @@ signedTransaction : signed hex to broadcast</p>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="request-v1-transaction-pushtx-example-curl">
-                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "signedTransaction=01000000010b7ad3946c6fcd15d39fd4312c4f8dfd68c51a61071c2575cfb0722c4403eef1000000008a47304402206fe4eabf81cc4c6c3cee3dedc6ea9be46bb685c1b61da577bb9aead8188b80b702201404284c52ad2e857bd3931fb0e1646575d1e72c93b2cdcd80a7e0c7bee1c191014104ad90e5b6bc86b3ec7fac2c5fbda7423fc8ef0d58df594c773fa05e2c281b2bfe877677c668bd13603944e34f4818ee03cadd81a88542b8b4d5431264180e2c28ffffffff0470170000000000001976a9143b0000000000000001000000009d828d9600000088ac70170000000000001976a9143c791cc99255509d85788e2bf0e0f6e8b389b3cf88ac40355d5f000000001976a914946cb2e08075bcbaf157e47bcb67eb2b2339d24288ac70170000000000001976a914946cb2e08075bcbaf157e47bcb67eb2b2339d24288ac00000000" "https://api.omniexplorer.info/v1/transaction/pushtx/"</code></pre>
+                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Content-Type: application/x-www-form-urlencoded" -d "signedTransaction=020000000001017d0a9d0b16542c8657ed195ccfb609a355870536cfeb62693c51370182eebcff020000001716001492ce4901aa985067d8b57fcec23c1599a4d4b4ebfeffffff0268a067836c00000017a91453238cd9bc97d2c2341feb646c6673a45a41cba68700e1f5050000000017a91422d8cbdfdcbd55be52147a17856d9325337338b18702473044022009a4c15f645e570062219e6f4e2472325bf5b587bd9afb41ba18791210b5651e02207c33a6165fcc2e4e02f370f0a68534bd47c299122f488c93b106d1fbfb9fbdaa0121032caedd956242574b9c34999d8ff469efecd135db0e23d9920478264a34518811d5b83700" "https://api.omnifeather.com/v1/transaction/pushtx/"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-v1-transaction-pushtx-example-http">
                                 <pre><code class="hljs http">POST /v1/transaction/pushtx/ HTTP/1.1
-Host: api.omniexplorer.info
+Host: api.omnifeather.com
 Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 
-signedTransaction=01000000010b7ad3946c6fcd15d39fd4312c4f8dfd68c51a61071c2575cfb0722c4403eef1000000008a47304402206fe4eabf81cc4c6c3cee3dedc6ea9be46bb685c1b61da577bb9aead8188b80b702201404284c52ad2e857bd3931fb0e1646575d1e72c93b2cdcd80a7e0c7bee1c191014104ad90e5b6bc86b3ec7fac2c5fbda7423fc8ef0d58df594c773fa05e2c281b2bfe877677c668bd13603944e34f4818ee03cadd81a88542b8b4d5431264180e2c28ffffffff0470170000000000001976a9143b0000000000000001000000009d828d9600000088ac70170000000000001976a9143c791cc99255509d85788e2bf0e0f6e8b389b3cf88ac40355d5f000000001976a914946cb2e08075bcbaf157e47bcb67eb2b2339d24288ac70170000000000001976a914946cb2e08075bcbaf157e47bcb67eb2b2339d24288ac00000000</code></pre>
+signedTransaction=020000000001017d0a9d0b16542c8657ed195ccfb609a355870536cfeb62693c51370182eebcff020000001716001492ce4901aa985067d8b57fcec23c1599a4d4b4ebfeffffff0268a067836c00000017a91453238cd9bc97d2c2341feb646c6673a45a41cba68700e1f5050000000017a91422d8cbdfdcbd55be52147a17856d9325337338b18702473044022009a4c15f645e570062219e6f4e2472325bf5b587bd9afb41ba18791210b5651e02207c33a6165fcc2e4e02f370f0a68534bd47c299122f488c93b106d1fbfb9fbdaa0121032caedd956242574b9c34999d8ff469efecd135db0e23d9920478264a34518811d5b83700</code></pre>
                             </div>
                         </div>
                     </div>
@@ -1843,7 +1597,7 @@ signedTransaction=01000000010b7ad3946c6fcd15d39fd4312c4f8dfd68c51a61071c2575cfb0
                                         <pre><code>{
     "status": "OK",
     "pushed": "Success",
-    "tx": "9975dcd1f574fe8356183e34eb435df6aa5620e7f9fea98a3c2349a10383a62b"
+    "tx": "382354c3c0907a0d989f2f5dd7cba930f2a3934123fef8b8c8c05f05caacd822"
 }</code></pre>
                                     </td></tr>
                                     
@@ -1876,11 +1630,11 @@ signedTransaction=01000000010b7ad3946c6fcd15d39fd4312c4f8dfd68c51a61071c2575cfb0
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="request-v1-transaction-tx-txhash-example-curl">
-                                <pre><code class="hljs curl">curl -X GET -H "Content-Type: application/x-www-form-urlencoded" "https://api.omniexplorer.info/v1/transaction/tx/e0e3749f4855c341b5139cdcbb4c6b492fcc09c49021b8b15462872b4ba69d1b"</code></pre>
+                                <pre><code class="hljs curl">curl -X GET -H "Content-Type: application/x-www-form-urlencoded" "https://api.omnifeather.com/v1/transaction/tx/14b440f5c146d179939119eb6ce64593efddf9074f3bb455e53d6406377ccff0"</code></pre>
                             </div>
                             <div class="tab-pane" id="request-v1-transaction-tx-txhash-example-http">
-                                <pre><code class="hljs http">GET /v1/transaction/tx/e0e3749f4855c341b5139cdcbb4c6b492fcc09c49021b8b15462872b4ba69d1b HTTP/1.1
-Host: api.omniexplorer.info
+                                <pre><code class="hljs http">GET /v1/transaction/tx/14b440f5c146d179939119eb6ce64593efddf9074f3bb455e53d6406377ccff0 HTTP/1.1
+Host: api.omnifeather.com
 Content-Type: application/x-www-form-urlencoded</code></pre>
                             </div>
                         </div>
@@ -1912,21 +1666,23 @@ Content-Type: application/x-www-form-urlencoded</code></pre>
                                     
                                     
                                     <tr><td class="response-text-sample" colspan="2">
-                                        <pre><code>{
-    "amount": "6167.00000000",
-    "block": 511660,
-    "blockhash": "0000000000000000003f37e72e599fbdaa14396a2e9251e493f0d7d15b1fd915",
-    "blocktime": 1520009505,
-    "confirmations": 7499,
+                                        <pre><code>
+{
+    "amount": "1.00000000",
+    "block": 3572930,
+    "blockhash": "7db39faab0231caa69d81efc850e21c4c0719bd8373a1881e5e09d490067fdf4",
+    "blocktime": 1615097662,
+    "confirmations": 78990,
     "divisible": true,
-    "fee": "0.00009124",
+    "fee": "0.00398000",
+    "flags": null,
     "ismine": false,
-    "positioninblock": 825,
-    "propertyid": 31,
-    "propertyname": "TetherUS",
-    "referenceaddress": "3GyeFJmQynJWd8DeACm4cdEnZcckAtrfcN",
-    "sendingaddress": "3D4r9ERiM3HSc4eC4EhcT31tXoSV96HsPg",
-    "txid": "e0e3749f4855c341b5139cdcbb4c6b492fcc09c49021b8b15462872b4ba69d1b",
+    "positioninblock": 2,
+    "propertyid": 6,
+    "propertyname": "Omniglobal",
+    "referenceaddress": "6kkYNUiQFDbYoj7Pr8wc9oqJ1TjDNtxy77",
+    "sendingaddress": "3NqZg44HNtmmcDggd8wyVxmUZo2Vv9Fqvk",
+    "txid": "14b440f5c146d179939119eb6ce64593efddf9074f3bb455e53d6406377ccff0",
     "type": "Simple Send",
     "type_int": 0,
     "valid": true,

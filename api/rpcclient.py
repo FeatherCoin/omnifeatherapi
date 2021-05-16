@@ -6,14 +6,14 @@ class RPCHost():
     def __init__(self):
         self._session = requests.Session()
         try:
-            with open( os.getenv("HOME") +'/.bitcoin/bitcoin.conf') as fp:
-                RPCPORT="8332"
+            with open( os.getenv("HOME") +'/.feathercoin/feathercoin.conf') as fp:
+                RPCPORT="9337"
                 RPCHOST="localhost"
                 RPCSSL=False
                 for line in fp:
                     #print line
                     if line.split('=')[0] == "testnet" and line.split('=')[1] == "1":
-                        RPCPORT="18332"
+                        RPCPORT="19337"
                     elif line.split('=')[0] == "rpcuser":
                         RPCUSER=line.split('=')[1].strip()
                     elif line.split('=')[0] == "rpcpassword":

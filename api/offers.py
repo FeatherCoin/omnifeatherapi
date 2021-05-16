@@ -97,7 +97,7 @@ def mapSchema(row):
 
   if row[-11] == 20:
     #print row
-    ppc = Decimal( rawdata['bitcoindesired'] ) / Decimal( rawdata['amount'] )
+    ppc = Decimal( rawdata['feathercoindesired'] ) / Decimal( rawdata['amount'] )
     color = getcolor(row[10])
 
     if rawdata['divisible']:
@@ -136,7 +136,7 @@ def mapSchema(row):
     except TypeError:
       selljson=sellofferdata[-1]
 
-    ppc = Decimal( selljson['bitcoindesired'] ) / Decimal( selljson['amount'] )
+    ppc = Decimal( selljson['feathercoindesired'] ) / Decimal( selljson['amount'] )
 
     if selljson['divisible']:
       remaining = Decimal(row[1]) / Decimal(1e8)

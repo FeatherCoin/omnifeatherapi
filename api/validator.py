@@ -20,7 +20,7 @@ def isvalid(address):
     if TESTNET:
       checkset = ['m','n','2']
     else:
-      checkset = ['1','3']
+      checkset = ['6','7','3']
 
     try:
       if str(address[0]) in checkset:

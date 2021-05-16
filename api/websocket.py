@@ -230,16 +230,16 @@ def update_valuebook():
           rate=v[5]
           tstamp=str(v[6])
           source=v[7]
-          if p1=='Bitcoin' and p2=='Omni':
+          if p1=='Feathercoin' and p2=='Omni':
             if pid2==1:
               symbol="OMNI"
             else:
               symbol="SP"+str(pid2)
-          elif p1=='Fiat' and p2=='Bitcoin':
+          elif p1=='Fiat' and p2=='Feathercoin':
             #symbol="BTC"
             #if pid1>0 or pid2>0:
             #  symbol=symbol+str(name)
-            symbol="BTC"+str(name)
+            symbol="FTC"+str(name)
           else:
             symbol=name+str(pid2)
           valuebook[symbol]={"price":rate,"symbol":symbol,"timestamp":tstamp, "source":source}
@@ -404,6 +404,7 @@ def add_address(address,session):
   if isvalid(address):
     pass
   else:
+    print_debug(('websocket.py'),0)
     wsemit('subscribe','balance',{'address':address,'status':'invalid address'}, [session])
     return False
 

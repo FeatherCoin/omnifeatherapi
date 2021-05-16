@@ -29,17 +29,17 @@ def send_form_response(response_dict):
     if "." in response_dict['amount']:
       return (None, "Invalid Format. Amount should be specified in satoshis with no decimal point")
 
-    if 'currency' in response_dict and (response_dict['currency'] not in ['BTC','btc',0,'0']):
+    if 'currency' in response_dict and (response_dict['currency'] not in ['FTC','ftc',0,'0']):
         return (None, "Endpoint does not support that currency")
 
     if TESTNET or ('testnet' in response_dict and ( response_dict['testnet'][0] in ['true', 'True'] )):
         testnet =True
         magicbyte = 111
-        exodus_address='mpexoDuSkGGqvqrkrjiFng38QPkJQVFyqv'
+        exodus_address='mpEXodUS8LUsXUHm1Vyk7b1AzG9CkKw6Mp'
     else:
         testnet = False
-        magicbyte = 0
-        exodus_address='1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P'
+        magicbyte = 14
+        exodus_address='6eXoDUSUV7yrAxKVNPEeKAHMY8San5Z37V'
 
     if response_dict.has_key( 'pubKey' ) and is_pubkey_valid( response_dict['pubKey'][0]):
         pubkey = response_dict['pubKey'][0]
@@ -83,6 +83,7 @@ def send_form_response(response_dict):
                 response_status='invalid pubkey'
         else:
             if not is_valid_bitcoin_address(from_addr):
+                print_debug(('send.py'),0)
                 response_status='invalid address'
             else:
                 from_pubkey=bc_getpubkey(from_addr)
@@ -165,8 +166,8 @@ def prepare_send_tx_for_signing(from_address, to_address, marker_address, amount
     # calculate change
     change_value=inputs_total_value-required_value-fee
     if change_value < 0:
-        info('Error not enough BTC to generate tx - negative change')
-        raise Exception('This address must have enough BTC for miner fees and protocol transaction fees')
+        info('Error not enough FTC to generate tx - negative change')
+        raise Exception('This address must have enough FTC for miner fees and protocol transaction fees')
 
     # create a normal bitcoin transaction (not mastercoin)
     # dust to marker if required
